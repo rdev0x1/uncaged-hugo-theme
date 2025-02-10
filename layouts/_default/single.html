@@ -22,6 +22,9 @@
     {{ partial "i18nlist.html" . }}
   </article>
 
+  {{ if .Site.Params.utterances }}
+    {{ partial "utterances.html" . }}
+  {{ end }}
   {{ partial "disqus.html" .}}
 
 </main>
