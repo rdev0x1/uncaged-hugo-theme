@@ -1,0 +1,13 @@
+{{ if .IsTranslated }}
+<hr style="width:40%">
+<br/>
+Translations:
+<ul>
+  {{ range .Translations }}
+  <li>
+    <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}{{ if .IsPage }} ({{ i18n "wordCount" . }}){{ end }}</a>
+  </li>
+  {{ end }}
+</ul>
+<hr style="width:40%">
+{{ end }}
